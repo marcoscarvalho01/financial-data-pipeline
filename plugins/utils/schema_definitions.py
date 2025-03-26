@@ -1,5 +1,17 @@
 from google.cloud import bigquery
 
+PRICE_SCHEMA = [
+    {"name": "symbol", "type": "STRING", "mode": "REQUIRED"},
+    {"name": "date", "type": "DATE", "mode": "REQUIRED"},
+    {"name": "open", "type": "FLOAT", "mode": "REQUIRED"},
+    {"name": "high", "type": "FLOAT", "mode": "REQUIRED"},
+    {"name": "low", "type": "FLOAT", "mode": "REQUIRED"},
+    {"name": "close", "type": "FLOAT", "mode": "REQUIRED"},
+    {"name": "adj_close", "type": "FLOAT"},
+    {"name": "volume", "type": "INTEGER", "mode": "REQUIRED"},
+    {"name": "extraction_date", "type": "DATE", "mode": "REQUIRED"},
+]
+
 # Define schemas for different yfinance data types
 FUNDAMENTALS_SCHEMA = {
     'info': [
