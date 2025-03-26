@@ -2,3 +2,4 @@ logs/
 .env
 .venv
 service_account_credentials.json
+__pycache__/
